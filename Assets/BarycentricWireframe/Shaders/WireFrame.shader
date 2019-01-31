@@ -72,7 +72,7 @@
 
 			float edgeFactor(float3 bary)
 			{
-				float d = fwidth(bary);
+				float3 d = fwidth(bary);
 				float3 a3 = smoothstep(float3(0, 0, 0), _Gain * d, bary);
 				return min(min(a3.x, a3.y), a3.z);
 			}
